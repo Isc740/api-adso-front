@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Orders System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="dark-theme">
+    <div class="d-flex">
+      <div class="sidebar bg-dark">
+        <div class="sidebar-header p-3">
+          <h4 class="text-white">Menú</h4>
+        </div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" data-table="table-clients">
+              <i class="fas fa-users me-2"></i>Clientes
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-table="table-products">
+              <i class="fas fa-box me-2"></i>Productos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-table="table-orders">
+              <i class="fas fa-receipt me-2"></i>Órdenes
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-table="table-orderdetails">
+              <i class="fas fa-list-alt me-2"></i>Detalles de Órdenes
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-table="table-categories">
+              <i class="fas fa-tags me-2"></i>Categorías
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <span class="navbar-brand">Sistema de Órdenes</span>
+          </div>
+        </nav>
+
+        <!-- Table Container -->
+        <div class="container-fluid mt-4">
+          <div class="card bg-dark text-white">
+            <div class="card-header">
+              <h5 id="table-title">Clientes</h5>
+            </div>
+            <div class="card-body">
+              <table
+                id="data-table"
+                class="table table-dark table-striped table-hover w-100"
+              >
+                <thead></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
