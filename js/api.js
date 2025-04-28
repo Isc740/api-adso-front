@@ -48,7 +48,12 @@ async function updateItem(endpoint, id, data) {
 async function deleteItem(endpoint, id) {
     try {
         const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
         });
         if (!response.ok) throw new Error("Error al eliminar el elemento");
         return true;
