@@ -14,11 +14,11 @@ async function fetchData(endpoint) {
 async function createItem(endpoint, data) {
     try {
         const response = await fetch(`${API_BASE_URL}/${endpoint}`, {
-            method: 'POST',
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
         });
         if (!response.ok) throw new Error("Error al crear el elemento");
         return await response.json();
@@ -31,11 +31,11 @@ async function createItem(endpoint, data) {
 async function updateItem(endpoint, id, data) {
     try {
         const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
-            method: 'PUT',
+            method: "PUT",
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
         });
         if (!response.ok) throw new Error("Error al actualizar el elemento");
         return await response.json();
@@ -48,12 +48,12 @@ async function updateItem(endpoint, id, data) {
 async function deleteItem(endpoint, id) {
     try {
         const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
-            method: 'DELETE',
-            mode: 'cors',
+            method: "DELETE",
+            mode: "cors",
             headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
         });
         if (!response.ok) throw new Error("Error al eliminar el elemento");
         return true;

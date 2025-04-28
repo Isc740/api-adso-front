@@ -375,7 +375,6 @@ function initSidebar() {
 }
 
 function setupEventListeners() {
-    // Botón crear
     const createBtn = document.getElementById("create-btn");
     if (createBtn) {
         createBtn.addEventListener("click", () => {
