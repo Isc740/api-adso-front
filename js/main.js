@@ -87,7 +87,7 @@ const tableConfigs = {
                 data: "ordStatus",
                 render: (data) => (data ? "Activo" : "Inactivo"),
             },
-            { title: "Cliente ID", data: "clientCliId" },
+            { title: "Cliente ID", data: "clientCliID" },
             { ...actionColumnConfig, title: "Acciones" },
         ],
         endpoint: "Orders",
